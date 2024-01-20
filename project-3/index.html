@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="" type="image/x-icon">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/shopping-cart.css' rel='stylesheet'>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,7 +14,34 @@
 </head>
 <body>
     <header>
-       
+        <nav class="navigation">
+            <div class="navLeft"> 
+                <h1 class="navTitle">sneakers</h1>
+                <div class="navItems">
+                    <i class="item">Collections</i>
+                    <i class="item">Men</i>
+                    <i class="item">Women</i>
+                    <i class="item">About</i>
+                    <i class="item">Contact</i>
+                </div>
+            </div>
+            <div class="navIcons">
+                <div class="cart">
+                    <div class="cartIcon"><img src="./pictures/icon-cart.svg" alt=""></div>
+                    <div class="cartCount" id="cartCount">0</div>
+                    <div class="cartDropDown" id="cartDropDown">
+                        <div class="cartHeader">
+                            <p>Cart</p>
+                        </div>
+                        <div class="cartItems">
+                            <p class="cartEmpty">Your Cart is Empty!</p>
+                        </div>
+                        
+                    </div>
+                </div>
+                <img src="./pictures/image-avatar.png" width="40px" class="profilePic"></img>
+            </div>
+        </nav>
     </header>
 </body>
 </html>

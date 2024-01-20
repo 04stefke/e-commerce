@@ -1,20 +1,122 @@
 *, *::before, *::after{
     font-family: 'Kumbh Sans', sans-serif;
     box-sizing: border-box;
-}
-
-body{
     margin: 0;
     padding: 0;
 }
+:root{
+    --primary-o: hsl(26, 100%, 55%);
+    --primary-po: hsl(25, 100%, 94%);
+    --neutral-darkB: hsl(220, 13%, 13%);
+    --neutral-darkGrayBlue:hsl(219, 9%, 45%);
+    --neutral-grayBlue: hsl(220, 14%, 75%);
+    --neutral-lightGrayBlue: hsl(223, 64%, 98%);
+    --neutral-white: hsl(0, 0%, 100%) ;
+    --neutral-lightboxBG:hsl(0, 0%, 0%);
+}
 
-a{
-    text-decoration: none;
+i{
+    font-style: normal;
+}
+
+body{
+    padding: 20px 10%;
+    background-color: var(--neutral-white);
 }
 
 .navigation{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
+    border-bottom: 1px solid gray;
+    padding-bottom: 30px;
+}
+
+.navTitle{
+    color: var(--neutral-darkB);
+    font-size: 30px;
+    font-weight: 700;
+    margin-right: 60px;
+}
+
+.item{
+    color: var(--neutral-grayBlue);
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.item:hover{
+    border-bottom: 3px solid var(--primary-o);
+    padding-bottom: 38px;
+    color: var(--neutral-darkGrayBlue);
+}
+
+.navLeft{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navIcons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profilePic{
+    margin-left: 40px;
+    cursor: pointer;
+}
+
+.profilePic:hover{
+    border: 1px solid var(--primary-o);
+    border-radius: 50%;
+}
+
+.cart{
+    position: relative;
+    display: inline-block; 
+    cursor: pointer;
+}
+
+.cartCount{
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: var(--primary-o);
+    color: var(--neutral-white);
+    border-radius: 50%;
+    padding: 5px 8px;
+    font-size: 8px;
+}
+
+.cartDropDown{
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 200px;
+    box-shadow: 0px 0px 20px var(--neutral-grayBlue);
+    min-height: 200px;
+    margin-top: 30px;
+    border-radius: 5px;
+}
+
+.cart:hover .cartDropDown{
+    display: block;
+}
+
+.cartHeader{
+    color: var(--neutral-darkB);
+    font-weight: 700 ;
+    font-style: bold;
+    border-bottom: 1px solid var(--neutral-grayBlue);
+    padding: 10px;
+}
+
+.cartItems{
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
 }
