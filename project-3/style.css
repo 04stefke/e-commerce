@@ -232,6 +232,12 @@ input[type=number]::-webkit-outer-spin-button {
     padding-top: 5px ;
 }
 
+.itemControls{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .count input{
     outline: none;
     border: none;
@@ -259,6 +265,22 @@ input[type=number]::-webkit-outer-spin-button {
 
 .count img:hover{
     filter: opacity(40%);
+}
+
+.btn{
+    padding: 20px 90px;
+    border-radius: 10px ;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: var(--primary-o);
+    color: var(--neutral-white);
+}
+
+.btnImg{
+    padding-right: 20px;
+    width: 35px;
+    color: white;
 }
 
 
