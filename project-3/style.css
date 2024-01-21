@@ -22,6 +22,8 @@ i{
 body{
     padding: 20px 10%;
     background-color: var(--neutral-white);
+    width: 100vw;
+    height: 100vh;
 }
 
 input[type=number]::-webkit-inner-spin-button, 
@@ -83,7 +85,7 @@ input[type=number]::-webkit-outer-spin-button {
     position: relative;
     display: inline-block; 
     cursor: pointer;
-    
+    width: fit-content;
 }
 
 .cartCount{
@@ -98,13 +100,15 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .cartDropDown{
-    display: none;
+    display: block;
     position: absolute;
+    right: -100px;
     background-color: #fff;
     min-width: 200px;
     box-shadow: 0px 0px 20px var(--neutral-grayBlue);
     min-height: 200px;
     margin-top: 30px;
+    margin-right: 30px;
     border-radius: 5px;
 }
 
@@ -135,6 +139,11 @@ input[type=number]::-webkit-outer-spin-button {
     width: 100%;
     height: 100%;
 }
+
+.items img{
+    border-radius: 7px;
+}
+
 
 .thumbImg{
     width: 70px;
