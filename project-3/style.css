@@ -24,6 +24,12 @@ body{
     background-color: var(--neutral-white);
 }
 
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none; 
+}
+
+
 .navigation{
     display: flex;
     justify-content: space-between;
@@ -189,8 +195,21 @@ body{
 }
 
 .price p{
-    color: var(--lightGrayBlue);
+    color: var(--neutral-grayBlue);
     text-decoration: line-through;
+}
+
+.itemDesc{
+    color: var(--neutral-grayBlue);
+    font-size: 16px;
+}
+
+.titleText{
+    color: var(--primary-o);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 12px;
+    font-weight: 550;
 }
 
 .discount p{
@@ -204,6 +223,13 @@ body{
 }
 .discount{
     padding-top: 5px ;
+}
+
+.count input{
+    outline: none;
+    border: none;
+    text-align: center;
+    max-width: 50px;
 }
 
 
