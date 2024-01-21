@@ -83,6 +83,7 @@ input[type=number]::-webkit-outer-spin-button {
     position: relative;
     display: inline-block; 
     cursor: pointer;
+    
 }
 
 .cartCount{
@@ -105,6 +106,10 @@ input[type=number]::-webkit-outer-spin-button {
     min-height: 200px;
     margin-top: 30px;
     border-radius: 5px;
+}
+
+.cartIcon{
+    filter: brightness(60%);
 }
 
 .cartIcon:hover{
@@ -275,12 +280,18 @@ input[type=number]::-webkit-outer-spin-button {
     cursor: pointer;
     background-color: var(--primary-o);
     color: var(--neutral-white);
+    transition: ease-in-out 0.2s;
 }
 
 .btnImg{
     padding-right: 20px;
     width: 35px;
     color: white;
+}
+
+.btn:hover{
+    opacity: 40%;
+    
 }
 
 
