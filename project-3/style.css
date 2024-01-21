@@ -101,6 +101,10 @@ body{
     border-radius: 5px;
 }
 
+.cartIcon:hover{
+    filter: brightness(0);
+}
+
 .cart:hover .cartDropDown{
     display: block;
 }
@@ -164,4 +168,6 @@ body{
 .descHeader{
     padding-bottom: 40px;
 }
+
+
 
