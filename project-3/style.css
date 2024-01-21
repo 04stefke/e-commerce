@@ -173,7 +173,8 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .thumbImg.active{
-    border: 2px solid var(--primary-o);
+    border: 3px solid var(--primary-o);
+    opacity: 40%;
 }
 
 .picContainer{
