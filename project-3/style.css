@@ -131,10 +131,13 @@ input[type=number]::-webkit-outer-spin-button {
     height: 100%;
 }
 
-#thumbImg{
+.thumbImg{
     width: 70px;
     border-radius: 10px;
     cursor: pointer;
+}
+
+.mr{
     margin-right: 15px;
 }
 
@@ -157,8 +160,11 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .defPic{
-    border-radius: 10px;
-    
+    border-radius: 10px; 
+}
+
+#thumbimg4{
+    margin: 0;
 }
 
 .picContainer{
