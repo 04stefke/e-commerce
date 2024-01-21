@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="" type="image/x-icon">
+    <link rel="shortcut icon" href="./pictures/favicon-32x32.png" type="image/x-icon">
     <link href='https://unpkg.com/css.gg@2.0.0/icons/css/shopping-cart.css' rel='stylesheet'>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -43,5 +43,44 @@
             </div>
         </nav>
     </header>
+    <section class="main">
+        <div class="picContainer">
+            <div id="mainImage">
+                <img src="pictures/image-product-1.jpg" alt="Default Image" width="411px" class="defPic">
+            </div>
+            <div id="thumbnails">
+                <img src="/pictures/image-product-1-thumbnail.jpg" alt="Thumbnail 1" onclick="changeImage('pictures/image-product-1.jpg')">
+                <img src="/pictures/image-product-2-thumbnail.jpg" alt="Thumbnail 1" onclick="changeImage('pictures/image-product-2.jpg')">
+                <img src="/pictures/image-product-3-thumbnail.jpg" alt="Thumbnail 1" onclick="changeImage('pictures/image-product-3.jpg')">
+                <img src="/pictures/image-product-4-thumbnail.jpg" alt="Thumbnail 1" onclick="changeImage('pictures/image-product-4.jpg')">
+            </div>
+        </div>
+        <div class="description">
+            <div class="descHeader">
+                <p class="titleText">Sneaker Company</p>
+                <h1 class="itemTitle">Fall Limited Edition Sneakers</h1>
+            </div>
+            <div class="itemDesc">
+                <p>These low-profile sneakers are your perfect casual wear companion. 
+                    Featuring a durable rubber outer sole, they'll withstand everything the weather can offer</p>
+            </div>
+            <div class="priceContainer">
+                <div class="price">
+                    <h1>$125.00</h1>
+                    <p>$250.00</p>
+                </div>
+                <div class="discount">
+                    <p>50%</p>
+                </div>
+            </div>
+            <div class="itemControls">
+                <div class="count">
+                    <button class="decrement">-</button>
+                    <input type="number" name="quantity" id="quantity" min="0" value="0">
+                    <button class="increment">+</button>
+                </div>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
