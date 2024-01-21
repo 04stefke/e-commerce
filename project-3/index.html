@@ -26,30 +26,10 @@
                 </div>
             </div>
             <div class="navIcons">
-                <div class="cart">
-                    <div class="cartIcon"><img src="./pictures/icon-cart.svg" alt=""></div>
+                <div class="cart" >
+                    <div class="cartIcon" id="cartIcon"><img src="./pictures/icon-cart.svg" alt=""></div>
                     <div class="cartCount" id="cartCount">0</div>
-                    <div class="cartDropDown" id="cartDropDown">
-                        <div class="cartHeader">
-                            <p>Cart</p>
-                        </div>
-                        <div class="cartItems">
-                            <!-- <p class="cartEmpty">Your Cart is Empty!</p> -->
-                            <div class="hide">
-                                <div class="items">
-                                    <img src="/pictures/image-product-1-thumbnail.jpg" width="40px" alt="">
-                                    <div class="item-disc">
-                                        <p>Fall Limited Edition Sneakers</p>
-                                        <div id="price-disc">
-                                            
-                                        </div>
-                                </div>
-                                <button>Checkout</button>
-                                </div>
-                                
-                            </div>
-                        </div>
-                        
+                    <div class="cartDropDown " id="cartDropdown">
                     </div>
                 </div>
                 <img src="./pictures/image-avatar.png" width="40px" class="profilePic"></img>
@@ -94,7 +74,7 @@
             </div>
             <div class="priceContainer">
                 <div class="price">
-                    <h1>$125.00</h1>
+                    <h1 >$<span class="pricee">125.00</span></h1>
                     <p>$250.00</p>
                 </div>
                 <div class="discount">
@@ -104,7 +84,7 @@
             <div class="itemControls">
                 <div class="count">
                     <img src="/pictures/icon-minus.svg" alt="Decrement" id="decrementBtn">
-                    <input type="number" name="quantity" id="quantity" min="0" value="0" >
+                    <input type="number" name="quantity" id="quantity" min="1" value="1" >
                     <img src="pictures/icon-plus.svg" alt="Increment" id="incrementBtn">
                 </div>
                 <div class="addToCartBtn">

@@ -2,9 +2,25 @@ const mainImg = document.getElementById('mainImage')
 const increment = document.getElementById('incrementBtn')
 const decrement = document.getElementById('decrementBtn')
 const thumbnail = document.querySelectorAll('.thumbImg')
+const cartIcon = document.getElementById('cartIcon')
+const dropdown = document.querySelector('.cartDropDown')
+
+const addToCart = document.getElementById('addToCart')
+const cartItemsDiv= document.querySelector('.cartItems')
+const totalSpan = document.querySelector('.total')
+
 let quantity = document.getElementById('quantity')
 
-let count = 0
+let count = 1
+
+// cartIcon.addEventListener('click',() => {
+//     if(dropdown.style.display === 'block'){
+//         dropdown.style.display = 'none'
+//     } else {
+//         dropdown.style.display = 'block'
+//     }
+// })
+
 
 increment.addEventListener('click', () => {
     count++
@@ -12,7 +28,7 @@ increment.addEventListener('click', () => {
 })
 
 decrement.addEventListener('click', () => {
-    if(count > 0){
+    if(count > 1){
         count--
         quantity.value = count
     }
@@ -31,3 +47,7 @@ function changeImage(imagePath) {
     mainImg.firstElementChild.src = imagePath
     
 }
+
+
+
+
