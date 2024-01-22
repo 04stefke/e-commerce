@@ -99,7 +99,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .cartDropDown{
-    display: block;
+    display: none;
     position: absolute;
     right: 0;
     background-color: #fff;
@@ -112,6 +112,11 @@ input[type=number]::-webkit-outer-spin-button {
     border-radius: 5px;
 }
 
+.cartTitle{
+    padding: 15px 0px 20px 20px;
+    border-bottom: 1px solid var(--neutral-grayBlue) ;
+}
+
 .cartIcon{
     filter: brightness(60%);
 }
@@ -119,6 +124,57 @@ input[type=number]::-webkit-outer-spin-button {
 .cartIcon:hover{
     filter: brightness(0);
 }
+
+.itemName{
+    padding-left: 10px;
+    color: var(--neutral-grayBlue);
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.itemName p{
+    padding-bottom: 5px;
+}
+
+
+
+
+.imgTitle{
+    display: flex;
+    flex-direction: column;
+}
+
+.imgTitle img{
+    border-radius: 7px;
+}
+
+.allInnerItems{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+
+
+.checkoutBtn{
+    padding: 10px ;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    background-color: var(--primary-o);
+    color: var(--neutral-white);
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.checkoutBtn:hover{
+    filter: opacity(45%);
+}
+
+
 
 /* thumbnails styling */
 
@@ -283,6 +339,10 @@ input[type=number]::-webkit-outer-spin-button {
 .btn:hover{
     opacity: 40%;
     
+}
+
+.hide{
+    display: none;
 }
 
 
