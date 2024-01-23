@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./pictures/favicon-32x32.png" type="image/x-icon">
-    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/shopping-cart.css' rel='stylesheet'>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
     <script defer src="scirpt.js"></script>
@@ -78,15 +78,15 @@
 
                 <div class="main-image">               
                     <img src="pictures/image-product-1.jpg" width="550px"  alt="Default Image" class="defPic" >
-                    <span class="close cursor controls" onclick="closeLightbox()"><img src="pictures/icon-close.svg" alt=""></span>
-                    <a class="prev controls"><img src="pictures/icon-minus.svg" alt=""></a>
-                    <a class="next controls"><img src="pictures/icon-plus.svg" alt=""></a>
+                    <span class="close cursor controls" onclick="closeLightbox()"><i class='bx bx-x'></i></span>
+                    <a class="prev controls"><i class='bx bx-chevron-left' onclick="showPrevImage()"></i></a>
+                    <a class="next controls"><i class='bx bx-chevron-right' onclick="showNextImage()"></i></a>
                 </div>
                 <div class="thumbnail-container">
-                    <img src="pictures/image-product-1-thumbnail.jpg" alt="Thumbnail 1" onclick="changeLightboxImage('pictures/image-product-1.jpg')" class="thumbImg active">
-                    <img src="pictures/image-product-2-thumbnail.jpg" alt="Thumbnail 2" onclick="changeLightboxImage('pictures/image-product-2.jpg')" class="thumbImg">
-                    <img src="pictures/image-product-3-thumbnail.jpg" alt="Thumbnail 3" onclick="changeLightboxImage('pictures/image-product-3.jpg')" class="thumbImg">
-                    <img src="pictures/image-product-4-thumbnail.jpg" alt="Thumbnail 4" onclick="changeLightboxImage('pictures/image-product-4.jpg')" class="thumbImg">
+                    <img src="pictures/image-product-1-thumbnail.jpg" alt="Thumbnail 1" onclick="changeLightboxImage('pictures/image-product-1.jpg')" class="thumbnailImg active">
+                    <img src="pictures/image-product-2-thumbnail.jpg" alt="Thumbnail 2" onclick="changeLightboxImage('pictures/image-product-2.jpg')" class="thumbnailImg">
+                    <img src="pictures/image-product-3-thumbnail.jpg" alt="Thumbnail 3" onclick="changeLightboxImage('pictures/image-product-3.jpg')" class="thumbnailImg">
+                    <img src="pictures/image-product-4-thumbnail.jpg" alt="Thumbnail 4" onclick="changeLightboxImage('pictures/image-product-4.jpg')" class="thumbnailImg">
                     
                 </div>
             </div>

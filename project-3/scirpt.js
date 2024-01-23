@@ -18,26 +18,26 @@ document.body.appendChild(lightbox)
 let count = 1
 
 
-    cartIcon.addEventListener('click',() => {
-        if(dropdown.style.display === 'block'){
-            dropdown.style.display = 'none'
-        } else {
-            dropdown.style.display = 'block'
-            emptyTag.classList.remove('hide')
-        }
-    })
+cartIcon.addEventListener('click',() => {
+    if(dropdown.style.display === 'block'){
+        dropdown.style.display = 'none'
+    } else {
+        dropdown.style.display = 'block'
+        emptyTag.classList.remove('hide')
+    }
+})
 
-    increment.addEventListener('click', () => {
-        count++
+increment.addEventListener('click', () => {
+    count++
+    quantity.value = count
+})
+
+decrement.addEventListener('click', () => {
+    if(count > 1){
+        count--
         quantity.value = count
-    })
-
-    decrement.addEventListener('click', () => {
-        if(count > 1){
-            count--
-            quantity.value = count
-        }
-    })
+    }
+})
 
 thumbnail.forEach(thumb => thumb.addEventListener('click', makeActive))
 
@@ -52,6 +52,8 @@ function changeImage(imagePath) {
     mainImg.firstElementChild.src = imagePath
     
 }
+
+var currentImageIndex = 0;
 
 function closeLightbox(){
     document.getElementById('lightboxModal').style.display = 'none'
@@ -68,27 +70,47 @@ function openLightbox(selectedImageSrc){
     
     lightboxMainImage.src = selectedImageSrc
 
-    thumbnails.forEach(function(thumbnail) {
+    thumbnails.forEach(function(thumbnail, index) {
         thumbnail.classList.remove('active');
         if (thumbnail.src.includes(selectedImageSrc)) {
-          thumbnail.classList.add('active');
+            thumbnail.classList.add('active');
+            currentImageIndex = index
         }
     })
 
     lightbox.style.display = 'block'
 }
 
+function showPrevImage(){
+    var thumbnails = document.querySelectorAll('.thumbnail-container img')
+    if(currentImageIndex > 0){
+        currentImageIndex -= 1
+    } else {
+        currentImageIndex = thumbnails.length - 1
+    }
+    changeLightboxImage(thumbnails[currentImageIndex].src)
+}
+
+function showNextImage(){
+    var thumbnails = document.querySelectorAll('.thumbnail-container img')
+    if(currentImageIndex < thumbnails.length -1 ){
+        currentImageIndex += 1
+    } else {
+        currentImageIndex = 0
+    }
+    changeLightboxImage(thumbnails[currentImageIndex].src)
+}
+
 function changeLightboxImage(imgSrc){
     var lightboxMainImage = document.querySelector('.lightbox .main-image img');
     lightboxMainImage.src = imgSrc;
-  
-    
+
     var thumbnails = document.querySelectorAll('.thumbnail-container img');
     thumbnails.forEach(function(thumb) {
-      thumb.classList.remove('active');
-      if (thumb.src.includes(imgSrc)) {
+        thumb.classList.remove('active');
+        if (thumb.src.includes(imgSrc)) {
         thumb.classList.add('active');
-      }
+        }
     });
 }
 
@@ -98,27 +120,5 @@ if (images) {
         openLightbox(images.src);
     });
 }
-var slideIndex = 1
 
-function showSlides(n) {
-    var i
-    var slides = document.getElementsByClassName('lightbox-slide')
-    if(n > slides.length) {slideIndex = 1}
-    if(n < 1) {slideIndex = slides.length}
-    for(i = 0; i < slides.length; i++){
-        slides[i].style.display = 'none'
-    }
-    slides[slideIndex - 1].style.display = 'block'
-}
 
-function setCurrentSlide(n) {
-    showSlides(slideIndex = n)
-}
-
-function moveSlide(n){
-    showSlides(slideIndex += n)
-}
-
-function currentSlide(n) {
-    showSlides(slideIndex = n)
-}

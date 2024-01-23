@@ -378,20 +378,49 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .close{
-    top: -20px;
+    top: -50px;
     right: 10px;
-
+    font-size: 40px;
+    color: var(--neutral-darkGrayBlue);
 }
 
+.close:hover{
+    color: var(--primary-o);
+}
 .next {
-    right: 0;
+    right: -25px;
     top: 50%; 
+    border-radius: 50%;
+    background-color: var(--neutral-white);
+    padding: 10px;
+    font-size: 30px;
 }
 
 .prev {
-    left: 0;
-    top: 50%;  
+    left: -25px;
+    top: 50%; 
+    border-radius: 50%;
+    background-color: var(--neutral-white);
+    padding: 10px;
+    font-size: 30px;
 }
+
+.prev:hover,
+.next:hover{
+    color: var(--primary-o);
+}
+
+.thumbnailImg{
+    width: 70px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.thumbnailImg.active{
+    border: 3px solid var(--primary-o);
+    opacity: 40%;
+}
+
 
 
 
