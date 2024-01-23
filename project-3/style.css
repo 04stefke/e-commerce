@@ -378,8 +378,9 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .close{
-    top: 60px;
-    right: 200px;
+    top: -20px;
+    right: 10px;
+
 }
 
 .next {
