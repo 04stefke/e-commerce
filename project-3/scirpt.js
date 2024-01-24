@@ -117,8 +117,11 @@ function changeLightboxImage(imgSrc){
 const images = document.querySelector('.defPic')
 if (images) {
     images.addEventListener('click', function() {
-        openLightbox(images.src);
+        var width = window.innerWidth
+        if(width > 1220){
+            openLightbox(images.src);
+        }
+        
     });
 }
-
 

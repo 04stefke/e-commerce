@@ -15,14 +15,19 @@
 <body>
     <header>
         <nav class="navigation">
-            <div class="navLeft"> 
-                <h1 class="navTitle">sneakers</h1>
+            <div class="navLeft">
                 <div class="navItems">
-                    <i class="item">Collections</i>
-                    <i class="item">Men</i>
-                    <i class="item">Women</i>
-                    <i class="item">About</i>
-                    <i class="item">Contact</i>
+                    <input type="checkbox" name="" class="toggle-menu">
+                    <div class="hamburger"></div>
+                    <h1 class="navTitle">sneakers</h1>
+                    <div class="menuItems">
+                        <i class="item">Collections</i>
+                        <i class="item">Men</i>
+                        <i class="item">Women</i>
+                        <i class="item">About</i>
+                        <i class="item">Contact</i>
+                    </div>
+
                 </div>
             </div>
             <div class="navIcons">
@@ -51,7 +56,8 @@
                     alt="Default Image" 
                     width="350px" 
                     class="defPic"
-                    onclick="openLightbox(); setCurrentSlide(1)">
+                    id="defaultPicture"
+                    >
             </div>
             <div id="thumbnails">
                 <img src="/pictures/image-product-1-thumbnail.jpg" 
