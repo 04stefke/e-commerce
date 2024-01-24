@@ -125,3 +125,30 @@ if (images) {
     });
 }
 
+
+let currentImageIndexSmall = 0;
+const allImages = [
+    "pictures/image-product-1.jpg",
+    "pictures/image-product-2.jpg",
+    "pictures/image-product-3.jpg",
+    "pictures/image-product-4.jpg"
+];
+
+document.getElementById('prevButton').addEventListener('click', function() {
+    if (currentImageIndexSmall > 0) {
+        currentImageIndexSmall--;
+        updateImage();
+    }
+});
+
+document.getElementById('nextButton').addEventListener('click', function() {
+    if (currentImageIndexSmall < allImages.length - 1) {
+        currentImageIndexSmall++;
+        updateImage();
+    }
+});
+
+function updateImage() {
+    const mainImage = document.getElementById('defaultPicture');
+    mainImage.src = allImages[currentImageIndexSmall];
+}

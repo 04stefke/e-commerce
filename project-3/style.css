@@ -64,7 +64,7 @@ input[type=number]::-webkit-outer-spin-button {
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
-
+    z-index: 10;
 }
 
 
@@ -216,6 +216,27 @@ input[type=number]::-webkit-outer-spin-button {
 
 #mainImage{
     margin-bottom: 30px;
+    position: relative;
+}
+
+
+.rightArr, .leftArr{
+    padding: 10px;
+    font-size: 30px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    visibility: hidden;
+    cursor: pointer;
+}
+
+.rightArr:hover, .leftArr:hover{
+    color: var(--primary-o);
+}
+
+.rightArr{
+    right: 0;
 }
 
 #thumbnails img:hover{
@@ -505,10 +526,12 @@ input[type=number]::-webkit-outer-spin-button {
 @media screen and (max-width: 1230px ){
     .main{
         flex-direction: column;
-
     }
     .picContainer{
         max-width: 450px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
     }
     .itemControls{
         flex-direction: column;
@@ -535,6 +558,9 @@ input[type=number]::-webkit-outer-spin-button {
     }
     .description{
         width: 400px;
+    }
+    .rightArr, .leftArr{
+        visibility: visible;
     }
 }
 
@@ -579,9 +605,19 @@ input[type=number]::-webkit-outer-spin-button {
         padding-top: 20px;
         padding-left: 10px;
         padding-bottom: 0;
+        width: auto;
+        max-width: 640px;
+        z-index: 10;
+        justify-content: center;
     }
+    .navItems{
+        justify-content: start;
+        width: auto;
+    }
+
     body{
         padding: 0;
+        margin: 10pz;
     }
     .profilePic{
         margin-left: 10px;
@@ -626,11 +662,17 @@ input[type=number]::-webkit-outer-spin-button {
 
 @media screen and (max-width: 450px) {
     .description{
+        width: 300px;
+    }
+    .menuItems{
+        width: 60%;
+    }
+    .defPic{
+        width: 300px;
+    }
+    .itemDesc p{
         width: auto;
     }
-  .menuItems{
-    width: 60%;
-  }
 }
 
 
