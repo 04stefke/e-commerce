@@ -168,6 +168,7 @@ let cart = {
             };
         }
     this.updateCartUI();
+    quantity.value = 1
     },
 
     clearCart: function() {
