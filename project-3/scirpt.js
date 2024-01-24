@@ -20,7 +20,7 @@ let count = 1
 
 cartIcon.addEventListener('click',() => {
     if(dropdown.style.display === 'block'){
-        dropdown.style.display = 'none'
+        dropdown.style.display = 'none'    
     } else {
         dropdown.style.display = 'block'
         emptyTag.classList.remove('hide')
@@ -152,3 +152,86 @@ function updateImage() {
     const mainImage = document.getElementById('defaultPicture');
     mainImage.src = allImages[currentImageIndexSmall];
 }
+
+// Assuming you have a cart object to track items
+let cart = {
+    items: {},
+    addItem: function(productId, quantity) {
+      // If the item is already in the cart, update the quantity
+        if (this.items[productId]) {
+            this.items[productId].quantity += quantity;
+        } else {
+        // If it's a new item, set its quantity
+            this.items[productId] = {
+                quantity: quantity
+          // Include other item details as necessary
+            };
+        }
+    this.updateCartUI();
+    },
+
+    clearCart: function() {
+        this.items = {};
+        this.updateCartUI();
+        this.totalQuantity = 0
+        cartCount.innerText = this.totalQuantity
+    },
+    
+
+    updateCartUI: function() {
+        let totalQuantity = 0
+
+        cartItemsDiv.innerHTML = ''
+        
+        for(let id in this.items){
+            let item = this.items[id]
+            totalQuantity += item.quantity
+            
+            let productInfo = getProductId(id)
+
+            cartItemsDiv.innerHTML += `
+            <div class="cart-item">
+                <img src="${productInfo.thumbnail}" alt="${productInfo.name}" class="cartImg">
+                <div class="item-info">
+                    <div class='innerItemInfo'>
+                        <p>${productInfo.name}</p>
+                        <p>$${productInfo.price}.00 x ${item.quantity} <b>$${productInfo.price * item.quantity}.00</b></p>
+                    </div>
+                </div>
+            </div>
+            <button class="checkoutBtn">Checkout</button>
+            `
+            cartCount.innerText = totalQuantity
+        }
+
+    if(totalQuantity > 0){
+        cartItemsDiv.style.display = 'block'
+        emptyTag.style.display= 'none'
+        document.getElementById('bin').style.display = 'block'
+    }else {
+        cartItemsDiv.style.display = 'none'
+        emptyTag.style.display= 'block'   
+        document.getElementById('bin').style.display = 'none'
+    }
+
+    quantity.value = 1
+    }
+};
+
+function getProductId(productId){
+    return {
+        name: 'Fall Limited Edition Sneakers',
+        price: 125.00,
+        thumbnail: '/pictures/image-product-1-thumbnail.jpg'
+    }
+}
+document.getElementById('addToCart').addEventListener('click', function() {
+    let quantity = parseInt(document.getElementById('quantity').value, 10);
+    cart.addItem('product1', quantity); // 'product1' is a placeholder, use your actual product ID
+    cartCount.style.display = 'block'
+});
+
+document.getElementById('bin').addEventListener('click', function() {
+    cart.clearCart();
+    cartCount.style.display = 'none'
+  });
