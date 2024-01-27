@@ -2,7 +2,7 @@
 
 
 
-- [About](#overview)
+- [About](#about)
 - [Introduction](#introduction)
 - [The challenge](#the-challenge)
 - [Screenshots](#screenshots)
